@@ -1,4 +1,5 @@
 #park.fail
+[![Build Status](https://travis-ci.org/cantado/park.fail.svg)](https://travis-ci.org/cantado/park.fail)
 
 See the biggest parking fails ever.
 
