@@ -1,0 +1,19 @@
+language: ruby
+addons:
+  postgresql: 9.3.6
+rvm:
+- 2.1.5
+before_script:
+- export DISPLAY=:0.0
+- bundle install
+- bundle exec rake db:setup
+script: bundle exec rake test
+env:
+  global: 
+deploy:
+  provider: heroku
+  api_key:
+    secure: MmGYHrc5RCdpYkp81RwheFuiCCA1m5AZe0ruUdAOeNpGDZFg1QQez1jd3INzaGdIwF/mIzix6OoplxWwHLw/xXmMHiUnfehE45UWs5cZmOAnyEIi/22OO6lxYuPbnoTBBTQFvCW7+vxFYTdrQruGZYZcRpUU7xOiITtBjcObsQA=
+  app: qapi
+  on: master
+  strategy: git
