@@ -13,6 +13,6 @@ deploy:
   provider: heroku
   api_key:
     secure: MmGYHrc5RCdpYkp81RwheFuiCCA1m5AZe0ruUdAOeNpGDZFg1QQez1jd3INzaGdIwF/mIzix6OoplxWwHLw/xXmMHiUnfehE45UWs5cZmOAnyEIi/22OO6lxYuPbnoTBBTQFvCW7+vxFYTdrQruGZYZcRpUU7xOiITtBjcObsQA=
-  app: qapi
+  app: park-fail
   on: master
   strategy: git
