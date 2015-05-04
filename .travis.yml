@@ -6,10 +6,9 @@ rvm:
 before_script:
 - export DISPLAY=:0.0
 - bundle install
+- cp config/database.yml.travis config/database.yml
 - bundle exec rake db:setup
 script: bundle exec rake test
-env:
-  global: 
 deploy:
   provider: heroku
   api_key:
