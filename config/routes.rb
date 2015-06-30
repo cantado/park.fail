@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
+  resources :cars
   # devise auto generate
   devise_for :users
 
   authenticated do
-    root to: 'park#index', as: :authenticated
+    root to: 'cars#index', as: :authenticated
   end
 
   root to: 'landingpage#index'

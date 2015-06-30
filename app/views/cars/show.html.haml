@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Image:
+  = image_tag(@car.image_url) if @car.image
+%p
+  %b Place:
+  = @car.place
+%p
+  %b Rating points:
+  = @car.rating_points
+%p
+  %b Rating count:
+  = @car.rating_count
+%p
+  %b User:
+  = @car.user
+
+= link_to 'Edit', edit_car_path(@car)
+\|
+= link_to 'Back', cars_path
