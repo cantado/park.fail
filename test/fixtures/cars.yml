@@ -4,14 +4,12 @@ one:
   image: MyString
   place: MyString
   rating_points: 1
-  rating_count: MyString
-  integer: MyString
-  user_id: 
+  rating_count: 2
+  user: hans
 
 two:
   image: MyString
   place: MyString
   rating_points: 1
-  rating_count: MyString
-  integer: MyString
-  user_id: 
+  rating_count: 2
+  user: hans

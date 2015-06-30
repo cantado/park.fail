@@ -2,7 +2,9 @@ require 'test_helper'
 
 class CarsControllerTest < ActionController::TestCase
   setup do
+    @user = users(:hans)
     @car = cars(:one)
+    sign_in @user
   end
 
   test "should get index" do
@@ -18,7 +20,7 @@ class CarsControllerTest < ActionController::TestCase
 
   test "should create car" do
     assert_difference('Car.count') do
-      post :create, car: { image: @car.image, integer: @car.integer, place: @car.place, rating_count: @car.rating_count, rating_points: @car.rating_points, user_id: @car.user_id }
+      post :create, car: { image: @car.image, place: @car.place, rating_count: @car.rating_count, rating_points: @car.rating_points, user_id: @car.user_id }
     end
 
     assert_redirected_to car_path(assigns(:car))
@@ -35,7 +37,7 @@ class CarsControllerTest < ActionController::TestCase
   end
 
   test "should update car" do
-    patch :update, id: @car, car: { image: @car.image, integer: @car.integer, place: @car.place, rating_count: @car.rating_count, rating_points: @car.rating_points, user_id: @car.user_id }
+    patch :update, id: @car, car: { image: @car.image, place: @car.place, rating_count: @car.rating_count, rating_points: @car.rating_points, user_id: @car.user_id }
     assert_redirected_to car_path(assigns(:car))
   end
 
