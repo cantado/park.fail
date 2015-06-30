@@ -11,5 +11,7 @@ before_script:
 script: bundle exec rake test
 deploy:
   provider: heroku
-  api_key: <%= ENV['HEROKU_SECRET'] %>
+  api_key:
+    secure: NUNCfcoPJoDx024W9qVSEvV9BwbZvat/hugEDYCSJY4x76pgwMYLhsSvyjYc/p70oPN7JOf2JvTPXRrsebXBv2Vpr0SnVpLzNhBhHJQTGOWi32yrYcUWidEiZbc3EL9t42nZAN6q/uAZxXWmQfG9/LS2idBZLsY84vPMY5Xz3wo=
   app: park-fail
+  on: master
